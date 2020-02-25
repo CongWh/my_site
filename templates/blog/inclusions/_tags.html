@@ -1,0 +1,9 @@
+<div class="widget widget-tag-cloud">
+
+    {% for tag in tag_list %}
+	  <a href="{% url 'blog:tag' tag.pk %}" rel="{{ tag.num_posts }}">{{ tag.name }}</a>
+    {% empty %}
+      暂无标签！
+    {% endfor %}
+
+</div>

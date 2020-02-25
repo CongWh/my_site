@@ -1,0 +1,11 @@
+    
+	{% for category in category_list %}
+	  
+    <li>
+      <i class="fa fa-caret-right"></i>
+      <a class="btn btn-light" href="{% url 'blog:category' category.pk %}">{{ category.name }} <span
+          class="badge badge-dark">{{ category.num_posts }}</span></a>
+    </li>
+    {% empty %}
+      暂无分类！
+    {% endfor %}

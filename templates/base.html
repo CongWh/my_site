@@ -1,0 +1,262 @@
+{% load static %}
+{% load blog_extras %}
+
+<!doctype html>
+<html lang="zh_Hans_CN" prefix="og: http://ogp.me/ns#">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Home | BlueSkyCC</title>
+  
+  
+  <!-- 代码高亮 -->
+  <link href="https://cdn.bootcss.com/highlight.js/9.15.8/styles/github.min.css" rel="stylesheet">
+  <style>
+    .codehilite {
+      padding: 0;
+    }
+ 
+    /* for block of numbers */
+    .hljs-ln-numbers {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+ 
+      text-align: center;
+      color: #ccc;
+      border-right: 1px solid #CCC;
+      vertical-align: top;
+      padding-right: 5px;
+    }
+ 
+    .hljs-ln-n {
+      width: 30px;
+    }
+ 
+    /* for block of code */
+    .hljs-ln .hljs-ln-code {
+      padding-left: 10px;
+      white-space: pre;
+    }
+  </style>  
+  
+  
+  
+  
+  
+  
+  
+  <link rel="icon" type="image/x-icon" href="{% static 'blog/images/favicon.ico' %}">
+  <link rel="apple-touch-icon" href="{% static 'blog/images/favicon.ico' %}">
+  <link rel="alternate" type="application/atom+xml" title="BlueSkyCC&#39;s Blog atom feed" href="/feed.xml">
+  <meta name="description" content="欲淡则心虚，心虚则气清，气清则理明。">
+  <meta property="og:site_name" content="BlueSkyCC">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Home">
+  <meta property="og:description" content="欲淡则心虚，心虚则气清，气清则理明。">
+  <meta property="og:url" content="http://www.blueskycc.com/">
+  
+  <meta property="og:image" content="{% static 'blog/images/favicon.png' %}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="{% static 'blog/images/favicon.png' %}">
+  
+  <meta name="twitter:creator" content="#">
+  <meta name="twitter:site" content="#">
+  
+  <link rel="canonical" href="http://www.blueskycc.com/">
+  
+  <link rel="stylesheet" href="{% static 'blog/css/bootstrap.min.css' %}">
+  
+	<link rel="stylesheet" href="{% static 'blog/css/font-awesome.min.css' %}">
+	<link href="{% static 'blog/css/df192689c1114f44a80bb778586c412d.css' %}" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="{% static 'blog/css/flog.css' %}">
+
+<meta name="google-site-verification" content="h8jxTRuS6ULFwI6WDoBx0H-7GSBn8vvXSrgX08TrYYc" />
+<!--[if lt IE 9]>
+    <script src="../static/js/html5shiv.min.js"></script>
+<![endif]-->
+<script src="{% static 'blog/js/jquery.min.js' %}" crossorgin="anonymous"></script>
+<script src="{% static 'blog/js/moment-with-locales.min.js' %}"></script>
+<script> 
+moment.locale("en");
+function flask_moment_render(elem) {
+    $(elem).text(eval('moment("' + $(elem).data('timestamp') + '").' + $(elem).data('format') + ';'));
+    $(elem).removeClass('flask-moment').show();
+}
+function flask_moment_render_all() {
+    $('.flask-moment').each(function() {
+        flask_moment_render(this);
+        if ($(this).data('refresh')) {
+            (function(elem, interval) { setInterval(function() { flask_moment_render(elem) }, interval); })(this, $(this).data('refresh'));
+        }
+    })
+}
+$(document).ready(function() {
+    flask_moment_render_all();
+});
+</script>
+
+<script>
+moment.locale("zh-cn");
+</script>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="{% static 'blog/js/3424671173e0429daef0d9912310df9c.js' %}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-138226928-1');
+
+</script>
+  <style>:root {--primary-color: #346FAB;}</style>
+</head>
+<body>
+
+
+  
+
+  
+  
+  
+<!-- 导航栏 -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark" data-aos="fade-in">
+<a class="navbar-brand" href="{% url 'blog:index' %}">
+<img src="{% static 'blog/picture/favicon.png' %}" width="40" height="40" class="d-inline-block" alt="">
+<span class="heading">BlueSkyCC</span></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse align-items-center justify-content-between" id="navbarNavAltMarkup">
+	<div class="navbar-nav">
+	<a href="{% url 'blog:index' %}" class="nav-item nav-link">首页</a>  
+	<a href="#" class="nav-item nav-link">项目</a>
+	<a href="#" class="nav-item nav-link">归档</a>
+	<a href="#" class="nav-item nav-link">关于</a>
+	</div>
+  
+	<form class="form-inline my-2 my-lg-0" action="/search">
+		<input class="form-control mr-sm-2" type="search" name="search" aria-label="Search" required>
+		<button class="btn btn-dark my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+	</form>
+</div>
+</nav>
+<!-- 导航栏 --> 
+
+
+<!-- beijing --> 
+<section class="container-fluid page-head lazy" data-aos="fade-in" 
+style="background-image:url({% static 'blog/images/1.jpg' %});"
+>
+    <div class="shade"></div>
+    
+<div class="blog-info mx-auto">
+  
+  <a href="/" class="blog-head-logo">
+    <img class="avatar" src="{% static 'blog/picture/favicon.png' %}" alt="BlueSkyCC&#39;s Blog">
+  </a>
+  
+  <h1 class="heading">
+    BlueSkyCC
+  </h1>
+</div>
+
+<!--   -->
+
+<a id="totop" title="Return to the top" class="visible" href="javascript:void(0)">
+	<i class="fa fa-fw fa-arrow-up">
+
+	</i>
+</a>
+<!-- -->
+</section>
+  
+
+          
+{% block main %}	
+<!-- 主页面模板（各个文章） -->
+{% endblock main %}	 
+
+
+  
+
+<script src="{% static 'blog/js/popper.min.js' %}" crossorgin="anonymous"></script>
+<script src="{% static 'blog/js/bootstrap.min.js' %}" crossorgin="anonymous"></script>
+<script>
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+  // Set the options to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+    // ... more custom settings?
+  };
+
+</script>
+
+<script type="text/javascript" src="{% static 'blog/js/flog.js' %}"></script>
+<script async src="{% static 'blog/js/lazyload.min.js' %}"></script>
+<script async src="{% static 'blog/js/busuanzi.pure.mini.js' %}"></script> 
+  
+<script type="text/javascript">
+  if ($('#tag-cloud').length !== 0) {
+    async ('/static/blog/js/color-hash.js', function () {
+      var colorHash = new ColorHash({
+        saturation: 0.5
+      });
+      $('#tag-cloud > a').each(function (i, e) {
+        e.style["background-color"] = colorHash.hex(e.innerHTML.trim());
+      });
+    })
+  }
+  var dismissCover = function () {
+    var headerHeight = document.getElementsByClassName('page-head')[0].clientHeight;
+    $('.cover').animate({
+      height: headerHeight,
+      opacity: 0
+    }, 400, function () {
+      $(this).addClass('invisible');
+    });
+  };
+  $(window).on('scroll', dismissCover);
+  $(function () {
+    if (window.location.search !== '') {
+      dismissCover();
+    }
+  })
+
+</script>
+
+<script src="{% static 'blog/js/clicklove.js' %}"></script>
+
+
+<!-- 高亮js -->
+<script src="https://cdn.bootcss.com/highlight.js/9.15.8/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlightjs-line-numbers.js/2.7.0/highlightjs-line-numbers.min.js"></script>
+<script>
+hljs.initHighlightingOnLoad();
+hljs.initLineNumbersOnLoad();
+</script>
+</body>
+</html>

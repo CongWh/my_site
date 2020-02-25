@@ -1,0 +1,579 @@
+{% load static %}
+{% load blog_extras %}
+
+<!doctype html>
+<html lang="zh_Hans_CN" prefix="og: http://ogp.me/ns#">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Home | BlueSkyCC</title>
+  <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+  <link rel="apple-touch-icon" href="/static/images/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="Frost&#39;s Blog atom feed" href="/feed.xml">
+  <meta name="description" content="醉后不知天在水，满船清梦压星河">
+  <meta property="og:site_name" content="BlueSkyCC">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Home">
+  <meta property="og:description" content="醉后不知天在水，满船清梦压星河">
+  <meta property="og:url" content="http://frostming.com/">
+  <meta property="og:image" content="http://frostming.com/static/images/favicon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="http://frostming.com/static/images/favicon.png">
+  
+    <meta name="twitter:creator" content="@frostming90">
+    <meta name="twitter:site" content="@frostming90">
+  
+  <link rel="canonical" href="http://frostming.com/">
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+<link rel="stylesheet" href="../static/css/font-awesome.min.css">
+<link href="../static/css/df192689c1114f44a80bb778586c412d.css" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="../static/css/flog.css">
+
+<meta name="google-site-verification" content="h8jxTRuS6ULFwI6WDoBx0H-7GSBn8vvXSrgX08TrYYc" />
+<!--[if lt IE 9]>
+    <script src="../static/js/html5shiv.min.js"></script>
+<![endif]-->
+<script src="../static/js/jquery.min.js" crossorgin="anonymous"></script>
+<script src="../static/js/moment-with-locales.min.js"></script>
+<script>
+moment.locale("en");
+function flask_moment_render(elem) {
+    $(elem).text(eval('moment("' + $(elem).data('timestamp') + '").' + $(elem).data('format') + ';'));
+    $(elem).removeClass('flask-moment').show();
+}
+function flask_moment_render_all() {
+    $('.flask-moment').each(function() {
+        flask_moment_render(this);
+        if ($(this).data('refresh')) {
+            (function(elem, interval) { setInterval(function() { flask_moment_render(elem) }, interval); })(this, $(this).data('refresh'));
+        }
+    })
+}
+$(document).ready(function() {
+    flask_moment_render_all();
+});
+</script>
+
+<script>
+moment.locale("zh-cn");
+</script>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="../static/js/3424671173e0429daef0d9912310df9c.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-138226928-1');
+
+</script>
+
+  
+  
+  <style>:root {--primary-color: #346FAB;}</style>
+</head>
+
+<body>
+
+  
+  
+
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark" data-aos="fade-in">
+    <a class="navbar-brand" href="/">
+  <img src="../static/picture/favicon.png" width="40" height="40" class="d-inline-block" alt="">
+  <span class="heading">BlueSkyCC</span></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse align-items-center justify-content-between" id="navbarNavAltMarkup">
+  <div class="navbar-nav">
+    <a href="/archive" class="nav-item nav-link">归档</a>
+    
+      
+      <a href="/about" class="nav-item nav-link">关于</a>
+      
+    
+      
+      <a href="/projects" class="nav-item nav-link">项目</a>
+      
+    
+      
+    
+  </div>
+  <form class="form-inline my-2 my-lg-0" action="/search">
+    <input class="form-control mr-sm-2" type="search" name="search" aria-label="Search" required>
+    <button class="btn btn-dark my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+  </form>
+</div>
+  </nav>
+  
+
+<div class="cover float-section text-light lazy" data-bg="url('//static.frostming.com/images/2019-11-alexander-slash-c5Fm2UZwzBU-unsplash.jpg')">
+  <div class="mx-auto my-auto">
+    <div class="bio">
+      <img class="avatar" src="../static/picture/favicon.png" alt="Frost&#39;s Blog">
+      <h1 class="display-3 heading">Frost&#39;s Blog</h1>
+      <p class="lead site-des">醉后不知天在水，满船清梦压星河</p>
+    </div>
+    <div class="links lead">
+      <a href="javascript:void(0)" class="btn btn-outline-light" onclick="dismissCover()">博客</a>
+      <a href="/about" class="btn btn-outline-light">关于</a>
+    </div>
+  </div>
+</div>
+
+
+
+  <section class="container-fluid page-head lazy" data-aos="fade-in" 
+style="background-image:url(../static/images/2019-11-alexander-slash-c5fm2uzwzbu-unsplash.jpg);"
+>
+    <div class="shade"></div>
+    
+<div class="blog-info mx-auto">
+  
+  <a href="/" class="blog-head-logo">
+    <img class="avatar" src="../static/picture/favicon.png" alt="Frost&#39;s Blog">
+  </a>
+  
+  <h1 class="heading">
+    
+    Frost&#39;s Blog
+    
+  </h1>
+</div>
+
+  </section>
+  
+  <section class="main" id="main">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-8 px-lg-5 center-box page-links" data-aos="fade-up">
+          
+
+  
+  <div class="post-info d-flex align-items-center justify-content-between" data-type="article">
+    <div flex="1">
+      <div class="post-meta">
+        <time datetime="2020-02-13 08:02:31.007825"><span class="flask-moment" data-timestamp="2020-02-13T08:02:31Z" data-format="format('ll')" data-refresh="0" style="display: none">2020-02-13T08:02:31Z</span></time>
+        
+          <a class="post-cat" href="/cat/2"><i class="fa fa-folder-open"></i> 编程</a>
+        
+      </div>
+      <div class="post-item-content">
+        <a href="/2020/02-13/search-solution">
+          <h3 class="post-item-title">百度低质回答是如何坑了你</h3>
+        </a>
+        
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="post-info d-flex align-items-center justify-content-between" data-type="article">
+    <div flex="1">
+      <div class="post-meta">
+        <time datetime="2020-02-09 15:29:54.268034"><span class="flask-moment" data-timestamp="2020-02-09T15:29:54Z" data-format="format('ll')" data-refresh="0" style="display: none">2020-02-09T15:29:54Z</span></time>
+        
+          <a class="post-cat" href="/cat/5"><i class="fa fa-folder-open"></i> 电影</a>
+        
+      </div>
+      <div class="post-item-content">
+        <a href="/2020/02-09/movie-time-1">
+          <h3 class="post-item-title">一周观影记</h3>
+        </a>
+        
+      </div>
+    </div>
+    
+      <div class="post-item-image">
+        <a href="/2020/02-09/movie-time-1">
+          <figure class="lazy" data-bg="url(//static.frostming.com/images/2020-02-ipman.jpg)"></figure>
+        </a>
+      </div>
+    
+  </div>
+  
+  <div class="post-info d-flex align-items-center justify-content-between" data-type="article">
+    <div flex="1">
+      <div class="post-meta">
+        <time datetime="2019-12-26 07:36:35.152710"><span class="flask-moment" data-timestamp="2019-12-26T07:36:35Z" data-format="format('ll')" data-refresh="0" style="display: none">2019-12-26T07:36:35Z</span></time>
+        
+          <a class="post-cat" href="/cat/2"><i class="fa fa-folder-open"></i> 编程</a>
+        
+      </div>
+      <div class="post-item-content">
+        <a href="/2019/12-26/qa-no-action">
+          <h3 class="post-item-title">社区问答中需要避免的行为</h3>
+        </a>
+        
+      </div>
+    </div>
+    
+      <div class="post-item-image">
+        <a href="/2019/12-26/qa-no-action">
+          <figure class="lazy" data-bg="url(https://images.unsplash.com/photo-1458419948946-19fb2cc296af?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80)"></figure>
+        </a>
+      </div>
+    
+  </div>
+  
+  <div class="post-info d-flex align-items-center justify-content-between" data-type="article">
+    <div flex="1">
+      <div class="post-meta">
+        <time datetime="2019-12-17 01:17:32.919725"><span class="flask-moment" data-timestamp="2019-12-17T01:17:32Z" data-format="format('ll')" data-refresh="0" style="display: none">2019-12-17T01:17:32Z</span></time>
+        
+          <a class="post-cat" href="/cat/1"><i class="fa fa-folder-open"></i> 随笔</a>
+        
+      </div>
+      <div class="post-item-content">
+        <a href="/2019/12-17/2019-summary">
+          <h3 class="post-item-title">不想写的 2019 总结</h3>
+        </a>
+        
+      </div>
+    </div>
+    
+      <div class="post-item-image">
+        <a href="/2019/12-17/2019-summary">
+          <figure class="lazy" data-bg="url(https://images.unsplash.com/photo-1467810563316-b5476525c0f9?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1349&amp;q=80)"></figure>
+        </a>
+      </div>
+    
+  </div>
+  
+  <div class="post-info d-flex align-items-center justify-content-between" data-type="article">
+    <div flex="1">
+      <div class="post-meta">
+        <time datetime="2019-11-27 06:20:59.286005"><span class="flask-moment" data-timestamp="2019-11-27T06:20:59Z" data-format="format('ll')" data-refresh="0" style="display: none">2019-11-27T06:20:59Z</span></time>
+        
+          <a class="post-cat" href="/cat/2"><i class="fa fa-folder-open"></i> 编程</a>
+        
+      </div>
+      <div class="post-item-content">
+        <a href="/2019/11-27/oauth-login">
+          <h3 class="post-item-title">Flask 博客接入第三方登录</h3>
+        </a>
+        
+      </div>
+    </div>
+    
+      <div class="post-item-image">
+        <a href="/2019/11-27/oauth-login">
+          <figure class="lazy" data-bg="url(https://images.unsplash.com/photo-1425421640640-64c4debea1b4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80)"></figure>
+        </a>
+      </div>
+    
+  </div>
+  
+  <div class="post-info d-flex align-items-center justify-content-between" data-type="article">
+    <div flex="1">
+      <div class="post-meta">
+        <time datetime="2019-11-25 14:37:05.729331"><span class="flask-moment" data-timestamp="2019-11-25T14:37:05Z" data-format="format('ll')" data-refresh="0" style="display: none">2019-11-25T14:37:05Z</span></time>
+        
+          <a class="post-cat" href="/cat/2"><i class="fa fa-folder-open"></i> 编程</a>
+        
+      </div>
+      <div class="post-item-content">
+        <a href="/2019/11-25/git-commit-sign">
+          <h3 class="post-item-title">给你的 Git commit 加上绿勾</h3>
+        </a>
+        
+        <a href="/2019/11-25/git-commit-sign">
+          <p class="post-item-subtitle lead">一个简单但很多人没注意的细节</p>
+        </a>
+        
+      </div>
+    </div>
+    
+      <div class="post-item-image">
+        <a href="/2019/11-25/git-commit-sign">
+          <figure class="lazy" data-bg="url(https://images.unsplash.com/photo-1554252116-30abdf759321?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80)"></figure>
+        </a>
+      </div>
+    
+  </div>
+  
+  <div class="post-info d-flex align-items-center justify-content-between" data-type="article">
+    <div flex="1">
+      <div class="post-meta">
+        <time datetime="2019-11-22 13:30:42.178764"><span class="flask-moment" data-timestamp="2019-11-22T13:30:42Z" data-format="format('ll')" data-refresh="0" style="display: none">2019-11-22T13:30:42Z</span></time>
+        
+          <a class="post-cat" href="/cat/2"><i class="fa fa-folder-open"></i> 编程</a>
+        
+      </div>
+      <div class="post-item-content">
+        <a href="/2019/11-22/comment-system">
+          <h3 class="post-item-title">使用 Flask 做一个评论系统</h3>
+        </a>
+        
+      </div>
+    </div>
+    
+      <div class="post-item-image">
+        <a href="/2019/11-22/comment-system">
+          <figure class="lazy" data-bg="url(https://images.unsplash.com/photo-1421882046699-09a0ff4ffb1b?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1391&amp;q=80)"></figure>
+        </a>
+      </div>
+    
+  </div>
+  
+  <div class="post-info d-flex align-items-center justify-content-between" data-type="article">
+    <div flex="1">
+      <div class="post-meta">
+        <time datetime="2019-11-18 09:42:47.036853"><span class="flask-moment" data-timestamp="2019-11-18T09:42:47Z" data-format="format('ll')" data-refresh="0" style="display: none">2019-11-18T09:42:47Z</span></time>
+        
+          <a class="post-cat" href="/cat/2"><i class="fa fa-folder-open"></i> 编程</a>
+        
+      </div>
+      <div class="post-item-content">
+        <a href="/2019/11-18/python-setup">
+          <h3 class="post-item-title">我的Python环境设置</h3>
+        </a>
+        
+        <a href="/2019/11-18/python-setup">
+          <p class="post-item-subtitle lead">2020年我使用的Python工具</p>
+        </a>
+        
+      </div>
+    </div>
+    
+      <div class="post-item-image">
+        <a href="/2019/11-18/python-setup">
+          <figure class="lazy" data-bg="url(https://images.unsplash.com/photo-1573937938551-ad632716c1b8?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80)"></figure>
+        </a>
+      </div>
+    
+  </div>
+  
+  <div class="post-info d-flex align-items-center justify-content-between" data-type="article">
+    <div flex="1">
+      <div class="post-meta">
+        <time datetime="2019-11-12 08:12:34.660077"><span class="flask-moment" data-timestamp="2019-11-12T08:12:34Z" data-format="format('ll')" data-refresh="0" style="display: none">2019-11-12T08:12:34Z</span></time>
+        
+          <a class="post-cat" href="/cat/2"><i class="fa fa-folder-open"></i> 编程</a>
+        
+      </div>
+      <div class="post-item-content">
+        <a href="/2019/11-12/flask-vue-todo3">
+          <h3 class="post-item-title">Flask前后端分离实践：Todo App(3)</h3>
+        </a>
+        
+        <a href="/2019/11-12/flask-vue-todo3">
+          <p class="post-item-subtitle lead">CSRF防护与后端鉴权</p>
+        </a>
+        
+      </div>
+    </div>
+    
+      <div class="post-item-image">
+        <a href="/2019/11-12/flask-vue-todo3">
+          <figure class="lazy" data-bg="url(//static.frostming.com/images/2018-09-vue-flask.png)"></figure>
+        </a>
+      </div>
+    
+  </div>
+  
+  <div class="post-info d-flex align-items-center justify-content-between" data-type="article">
+    <div flex="1">
+      <div class="post-meta">
+        <time datetime="2019-10-24 13:21:16.512346"><span class="flask-moment" data-timestamp="2019-10-24T13:21:16Z" data-format="format('ll')" data-refresh="0" style="display: none">2019-10-24T13:21:16Z</span></time>
+        
+          <a class="post-cat" href="/cat/2"><i class="fa fa-folder-open"></i> 编程</a>
+        
+      </div>
+      <div class="post-item-content">
+        <a href="/2019/10-24/django-dry">
+          <h3 class="post-item-title">让你的Django应用变DRY的几个最佳实践</h3>
+        </a>
+        
+        <a href="/2019/10-24/django-dry">
+          <p class="post-item-subtitle lead">Django+Django REST Framework下的DRY实践</p>
+        </a>
+        
+      </div>
+    </div>
+    
+      <div class="post-item-image">
+        <a href="/2019/10-24/django-dry">
+          <figure class="lazy" data-bg="url(//static.frostming.com/images/2019-10-logo.png)"></figure>
+        </a>
+      </div>
+    
+  </div>
+  
+
+
+
+<div class="paginate d-flex justify-content-between">
+  <a href="/" rel="prev" >
+    <i class="fa fa-fw fa-angle-left"></i> 较新文章
+  </a>
+  <a href="/?page=2" rel="next" 
+    style="visibility: visible;" >
+    较旧文章 <i class="fa fa-fw fa-angle-right"></i>
+  </a>
+</div>
+
+
+</div>
+<div class="col-12 col-lg-4" data-aos="fade-left">
+          
+
+<div class="right-section">
+  <h2><i class="fa fa-list"></i> 分类 </h2>
+  <hr>
+  <ul class="cat-list">
+	{% show_categories %}
+
+  </ul>
+</div>
+
+<div class="right-section">
+  <h2><i class="fa fa-tags"></i> 标签</h2>
+  <hr>
+  <div class="mt-4" id="tag-cloud">
+    {% show_tags %}  
+  </div>
+</div>
+<div class="right-section">
+  <h2><i class="fa fa-link"></i> 推荐</h2>
+  <hr>
+  <ul class="mt-4 page-links cat-list" id="friends">
+    
+    <li><a href="https://frostming.com/" target="_blank">Frog's Blog</a></li>
+  </ul>
+</div>
+
+<div class="right-section">
+  <a class="twitter-timeline" data-height="800" href="https://twitter.com/frostming90?ref_src=twsrc%5Etfw">Tweets</a>
+  <script async src="../static/js/widgets.js" charset="utf-8"></script>
+</div>
+
+</div>
+      </div>
+    </div>
+    
+  </section>
+  
+
+
+  
+  <footer class="footer text-center page-links">
+    <ul class="social-links">
+  
+  <li>
+    <a href="https://github.com/frostming" target="_blank" title="GitHub">
+      
+        
+      
+      <i class="fa fa-fw fa-github"></i>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://twitter.com/frostming90" target="_blank" title="Twitter">
+      
+        
+      
+      <i class="fa fa-fw fa-twitter"></i>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://www.zhihu.com/people/frostming" target="_blank" title="知乎">
+      
+        
+      
+      <i class="iconfont icon-zhihu"></i>
+    </a>
+  </li>
+  
+  <li>
+    <a href="mailto:mianghong@gmail.com" target="_blank" title="Email">
+      
+        
+      
+      <i class="fa fa-fw fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li><a href="/feed.xml" title="RSS"><i class="fa fa-fw fa-rss"></i></a></li>
+</ul>
+    <ul class="copyright">
+      <li>Powered by <a href="https://palletsprojects.com/p/flask/" target="_blank">Flask</a></li>
+      <li>&copy;2016-2020<i class="fa fa-heart mx-2" style="color: var(--primary-color)"></i><a href="https://frostming.com">Frost Ming</a></li>
+      
+      <li><a href="http://beian.miit.gov.cn/" target="_blank">粤ICP备18114812号</a></li>
+      
+    </ul>
+  </footer>
+  
+
+  
+<script src="../static/js/popper.min.js" crossorgin="anonymous"></script>
+<script src="../static/js/bootstrap.min.js" crossorgin="anonymous"></script>
+<script>
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+  // Set the options to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+    // ... more custom settings?
+  };
+
+</script>
+
+<script type="text/javascript" src="../static/js/flog.js"></script>
+
+<script async src="../static/js/lazyload.min.js"></script>
+<script async src="../static/js/busuanzi.pure.mini.js"></script>
+  
+  
+<script type="text/javascript">
+  if ($('#tag-cloud').length !== 0) {
+    async ('/static/js/color-hash.js', function () {
+      var colorHash = new ColorHash({
+        saturation: 0.5
+      });
+      $('#tag-cloud > a').each(function (i, e) {
+        e.style["background-color"] = colorHash.hex(e.innerHTML.trim());
+      });
+    })
+  }
+  var dismissCover = function () {
+    var headerHeight = document.getElementsByClassName('page-head')[0].clientHeight;
+    $('.cover').animate({
+      height: headerHeight,
+      opacity: 0
+    }, 400, function () {
+      $(this).addClass('invisible');
+    });
+  };
+  $(window).on('scroll', dismissCover);
+  $(function () {
+    if (window.location.search !== '') {
+      dismissCover();
+    }
+  })
+
+</script>
+
+</body>
