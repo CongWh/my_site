@@ -124,7 +124,7 @@ data-was-processed="true" style="background-image: url({% static 'blog/images/1.
     </div>
     <div class="links lead">
       <a href="javascript:void(0)" class="btn btn-outline-light" onclick="dismissCover()">博客</a>
-      <a href="/about" class="btn btn-outline-light">关于</a>
+      <a href="{% url 'blog:about' %}" class="btn btn-outline-light">关于</a>
     </div>
   </div>
 </div>
@@ -184,11 +184,22 @@ style="background-image:url({% static 'blog/images/1.jpg' %});"
       </div>
     </div>
     
-      <div class="post-item-image">
-        <a href="/2019/12-17/2019-summary">
-          <figure class="lazy" data-bg="url(https://images.unsplash.com/photo-1467810563316-b5476525c0f9?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1349&amp;q=80)"></figure>
+
+	  {% if post.pic %}
+	   <div class="post-item-image">
+        <a href="{{ post.pic.url }}">
+          <figure class="lazy" data-bg="url({{ post.pic.url }})"></figure>
         </a>
       </div>
+	  {% endif %}
+
+	  
+	  
+
+	  
+	  
+	  
+	  
   </div>
 	{% empty %}
 		<div class="no-post">暂时还没有发布的文章！</div>

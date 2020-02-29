@@ -5,6 +5,36 @@
 
 
 {% block main %}
+
+
+
+<!-- beijing --> 
+
+<section class="container-fluid page-head lazy" data-aos="fade-in" {% if post.pic %}
+style="background-image:url({{ post.pic.url }});"
+{% else %}
+style="background-image:url({% static 'blog/images/1.jpg' %});"
+{% endif %}
+>
+<div class="shade"></div>
+
+<a id="totop" title="Return to the top" class="visible" href="javascript:void(0)">
+	<i class="fa fa-fw fa-arrow-up">
+
+	</i>
+</a>
+<!-- -->
+</section>
+
+
+
+
+
+
+
+
+
+
 <section class="main" id="main">
 <div class="container">
 <div class="row">

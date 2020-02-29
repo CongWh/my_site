@@ -8,14 +8,14 @@ from markdown.extensions.toc import TocExtension
 from .models import Post, Category, Tag
 from django.views.generic import ListView, DetailView # 类视图
 from pure_pagination.mixins import PaginationMixin 
-
+from itertools import chain # 返回多个值用
 
 class InitView(PaginationMixin, ListView):
     model = Post
     template_name = 'blog/base_pic.html'
     context_object_name = 'post_list' 
     # 指定 paginate_by 属性后开启分页功能，其值代表每一页包含多少篇文章
-    paginate_by = 10
+    paginate_by = 20
 
 
 class IndexView(PaginationMixin, ListView):
@@ -23,14 +23,22 @@ class IndexView(PaginationMixin, ListView):
     template_name = 'blog/index.html'
     context_object_name = 'post_list' 
     # 指定 paginate_by 属性后开启分页功能，其值代表每一页包含多少篇文章
-    paginate_by = 10
+    paginate_by = 20
 
 class BaseView(PaginationMixin, ListView):
     model = Post
     template_name = 'blog/base.html'
     context_object_name = 'post_list' 
     # 指定 paginate_by 属性后开启分页功能，其值代表每一页包含多少篇文章
-    paginate_by = 10	
+    paginate_by = 20	
+
+
+class AboutView(BaseView):
+    model = Post
+    template_name = 'blog/about.html'
+    context_object_name = 'post_list' 
+
+
 	
 class PostDetailView(DetailView):
     # 这些属性的含义和 ListView 是一样的
@@ -67,16 +75,37 @@ class PostDetailView(DetailView):
         post.toc = m.group(1) if m is not None else ''
  
         return post
-	
+
+'''		
 # 点击侧边栏归档	
 def archive(request, year, month):
     post_list = Post.objects.filter(created_time__year=year,
                                     created_time__month=month
                                     ).order_by('-created_time')
     return render(request, 'blog/index.html', context={'post_list': post_list})
+'''
+	
+class ArchiveView(IndexView):
+    model = Post
+    template_name = 'blog/index.html'
+    context_object_name = 'post_list'
+    def get_queryset(self):   # 多参数在 kwargs 中
+        year = self.kwargs['year']
+        month = self.kwargs['month']
+        return super().get_queryset().filter(created_time__year=year,
+                                    created_time__month=month
+                                    ).order_by('-created_time')
 
+    def get_context_data(self, **kwargs):    # 传到html更多的上下文，即内容
+        context = super().get_context_data(**kwargs)
+        year = self.kwargs['year']
+        month = self.kwargs['month']
+        context['archive_year'] = year;
+        context['archive_month'] = month;
+        return context										
 
-
+		
+		
 	
 # 点击侧边栏分类	
 class CategoryView(IndexView):
@@ -86,7 +115,8 @@ class CategoryView(IndexView):
     def get_queryset(self):
         cate = get_object_or_404(Category, pk=self.kwargs.get('pk'))
         return super(CategoryView, self).get_queryset().filter(category=cate)
-	
+
+
 
 #def tag(request, pk):
 #    # 记得在开始部分导入 Tag 类
@@ -97,5 +127,12 @@ class CategoryView(IndexView):
 class TagView(IndexView):
     def get_queryset(self):
         t = get_object_or_404(Tag, pk=self.kwargs.get("pk"))
+
         return super().get_queryset().filter(tags=t)	
-	
+
+    def get_context_data(self, **kwargs):    # 传到html更多的上下文，即内容
+        context = super().get_context_data(**kwargs)
+        t = get_object_or_404(Tag, pk=self.kwargs.get("pk"))
+        tag_name = t;
+        context['tag_name'] = tag_name;
+        return context

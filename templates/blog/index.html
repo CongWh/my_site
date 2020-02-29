@@ -7,6 +7,48 @@
 
 
 {% block main %}
+
+<!-- beijing --> 
+<section class="container-fluid page-head lazy" data-aos="fade-in" 
+style="background-image:url({% static 'blog/images/1.jpg' %});"
+>
+    <div class="shade"></div>
+    
+<div class="blog-info mx-auto">
+  
+  <a href="/" class="blog-head-logo">
+    <img class="avatar" src="{% static 'blog/picture/favicon.png' %}" alt="BlueSkyCC&#39;s Blog">
+  </a>
+
+  <h1 id="change_heading">
+	BlueSkyCC
+	</h1>
+</div>
+
+ <script>
+	var url = document.location.toString();	// 得到当前网址的 url
+	x = document.getElementById("change_heading");  //查找元素	
+	if (url.search("categories") != -1) {
+		x.innerHTML="分类：{{post_list.1.category.name}}";    //改变内容
+	}
+	if (url.search("tags") != -1) {
+		x.innerHTML="标签：{{tag_name}}";    //改变内容
+	}	
+	if (url.search("archives") != -1) {
+		x.innerHTML="归档：{{archive_year}}年{{archive_month}}月";   //改变内容
+	}
+</script> 
+
+<a id="totop" title="Return to the top" class="visible" href="javascript:void(0)">
+	<i class="fa fa-fw fa-arrow-up">
+
+	</i>
+</a>
+</section>
+<!-- -->
+
+
+
 <section class="main" id="main">
 <div class="container">
 <div class="row">
@@ -29,11 +71,13 @@
       </div>
     </div>
  <!--   {% static 'blog/images/2020.jpg' %}  -->
-      <div class="post-item-image">
-        <a href="{% static 'blog/images/2020.jpg' %}">
-          <figure class="lazy" data-bg="url({% static 'blog/images/2020.jpg' %})"></figure>
+	  {% if post.pic %}
+	   <div class="post-item-image">
+        <a href="{{ post.pic.url }}">
+          <figure class="lazy" data-bg="url({{ post.pic.url }})"></figure>
         </a>
       </div>
+	  {% endif %}
   </div>
 	{% empty %}
 		<div class="no-post">暂时还没有发布的文章！</div>

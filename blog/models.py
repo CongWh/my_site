@@ -86,6 +86,8 @@ class Post(models.Model):
     # 新增 views 字段记录阅读量
     views = models.PositiveIntegerField(default=0, editable=False)
 
+	# 新增文章的图片
+    pic = models.ImageField(upload_to='pic/%Y%m%d/', blank=True)
 	
     class Meta:
         verbose_name = '文章'
