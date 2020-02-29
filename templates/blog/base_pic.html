@@ -102,7 +102,7 @@ moment.locale("zh-cn");
 	<a href="{% url 'blog:index' %}" class="nav-item nav-link">首页</a>  
 	<a href="#" class="nav-item nav-link">项目</a>
 	<a href="#" class="nav-item nav-link">归档</a>
-	<a href="#" class="nav-item nav-link">关于</a>
+	<a href="{% url 'blog:about' %}" class="nav-item nav-link">关于</a>
 	</div>
   
 	<form class="form-inline my-2 my-lg-0" action="/search">
@@ -183,23 +183,14 @@ style="background-image:url({% static 'blog/images/1.jpg' %});"
         </a>
       </div>
     </div>
-    
-
-	  {% if post.pic %}
+   
+	  	  {% if post.pic %}
 	   <div class="post-item-image">
         <a href="{{ post.pic.url }}">
           <figure class="lazy" data-bg="url({{ post.pic.url }})"></figure>
         </a>
       </div>
 	  {% endif %}
-
-	  
-	  
-
-	  
-	  
-	  
-	  
   </div>
 	{% empty %}
 		<div class="no-post">暂时还没有发布的文章！</div>
