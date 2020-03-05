@@ -18,8 +18,8 @@ urlpatterns = [
     #path('tags/<int:pk>/', views.tag, name='tag'),
     path('tags/<int:pk>/', views.TagView.as_view(), name='tag'),
 	
-	path('about', views.AboutView.as_view(), name='about'),
+    path('about', views.AboutView.as_view(), name='about'),
 	
 ]
 
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+#urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
